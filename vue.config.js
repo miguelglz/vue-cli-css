@@ -2,7 +2,7 @@ const fs = require('fs');
 
 function getPagesFromDir(componentDir) {
 	const pagesObj = {};
-	fs.readdirSync(componentDir).map(filename => {
+	fs.readdirSync(componentDir).forEach(filename => {
 		const componentName = filename.replace('.vue','');
 		pagesObj[componentName] = { entry: componentDir + filename };
 	});
