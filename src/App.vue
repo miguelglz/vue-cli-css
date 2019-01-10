@@ -28,4 +28,19 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+.myclass2{
+  display: none;
+}
+#container1.myclass3{
+  width: 100%;
+}
+#container2.myclass4{
+  color: black;
+}
+.myclass5{
+  border: 1 solid blue;
+}
+.myclass6{
+  height: 100px;
+}
 </style>
