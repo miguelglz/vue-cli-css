@@ -1,7 +1,7 @@
-if(process.env.NODE_ENV === 'production') {
-    const fs = require('fs');
-    const path = require('path')
+const fs = require('fs');
+const path = require('path')
 
+if(process.env.NODE_ENV === 'production') {
     function getPagesFromDir(baseDir, pagesObj = {}) {
     	fs.readdirSync(baseDir).forEach(childName => {
             if(fs.statSync(baseDir + childName).isDirectory()) {
@@ -21,7 +21,7 @@ if(process.env.NODE_ENV === 'production') {
     module.exports = {
     	pages: getPagesFromDir('src/'),
         css: {
-            extract: {filename: "css/[name].css"},
+            extract: {filename: "[name].css"},
             modules: true,
             sourceMap: false,
             loaderOptions: {
