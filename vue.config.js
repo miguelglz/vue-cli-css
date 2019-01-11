@@ -21,7 +21,7 @@ if(process.env.NODE_ENV === 'production') {
     module.exports = {
     	pages: getPagesFromDir('src/'),
         css: {
-            extract: {filename: "[name].css"},
+            extract: {filename: "css/[name].css"},
             modules: true,
             sourceMap: false,
             loaderOptions: {
